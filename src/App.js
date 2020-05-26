@@ -1,8 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Main from './components/main';
 import Secret from './components/secret';
+import Notfound from './components/notfound';
+import Callback from './components/callback';
+
 
 
 class App extends React.Component{
@@ -14,13 +16,16 @@ render(){
   let mainComponent=""
   switch(this.props.location){
     case "":
-      mainComponent = <Main />
+      mainComponent = <Main {...this.props}/>
+      break;
+    case "callback":
+      mainComponent = <Callback />
       break;
     case "secret":
       mainComponent= <Secret />
       break;
     default:
-      mainComponent= <Main />
+      mainComponent= <Notfound />
   }
   return(
     <div className="App">
