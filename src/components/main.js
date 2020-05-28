@@ -7,7 +7,7 @@ export default class Main extends React.Component{
         return(
             <div>
                 <h1>{this.props.name}<br/>
-                    Do you want to see the secret list? <a href="/secret">CLick to go secret </a>
+                    Do you want to see my picture? <a href="/secret">CLick to see my picture </a>
                 </h1>
 
                 <div>

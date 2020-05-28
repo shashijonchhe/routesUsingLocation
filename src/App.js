@@ -22,7 +22,7 @@ render(){
       mainComponent = <Callback />
       break;
     case "secret":
-      mainComponent= <Secret />
+      mainComponent= this.props.auth.isAuthenticated()?<Secret {...this.props}/> : <Notfound /> 
       break;
     default:
       mainComponent= <Notfound />
